@@ -15,12 +15,11 @@ screenGui.Parent = playerGui
 -- ===== Frame (nền đen, viền vàng) =====
 local frame = Instance.new("Frame")
 frame.Size = UDim2.new(0, 130, 0, 40)
-frame.Position = UDim2.new(0, 15, 0, 15)
+frame.Position = UDim2.new(0, 10, 0, 80)          -- Ô trắng đã khoanh
 frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 frame.BackgroundTransparency = 0.2
 frame.BorderSizePixel = 0
-frame.Active = true          -- Cho phép kéo
-frame.Draggable = true       -- Bật kéo (đơn giản, không mượt lắm)
+frame.Active = true
 frame.Parent = screenGui
 
 -- Bo góc
@@ -44,7 +43,7 @@ label.Font = Enum.Font.Code
 label.Text = "FPS: --"
 label.Parent = frame
 
--- ===== Kéo thả mượt (dùng UserInputService) =====
+-- ===== Kéo thả mượt =====
 local dragging = false
 local dragStart = nil
 local startPos = nil
